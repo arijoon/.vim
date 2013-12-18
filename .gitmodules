@@ -4,3 +4,6 @@
 [submodule "/home/arman/dotfiles/.vim/bundle/nerdtree.git"]
 	path = /home/arman/dotfiles/.vim/bundle/nerdtree.git
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/vim-easymotion.git"]
+	path = .vim/bundle/vim-easymotion.git
+	url = https://github.com/Lokaltog/vim-easymotion.git
