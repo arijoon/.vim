@@ -17,3 +17,17 @@ set shiftwidth=4
 set expandtab
 " Allow nerdTree to modify
 set modifiable
+" Add line number and mapping
+set nu
+no <down> ddp
+no <up> ddkP
+no <left> gT
+no <right> gt
+ino <up> <Nop>
+ino <down> <Nop>
+ino <left> <Nop>
+ino <right> <Nop>
+" adding syntax highlighting for all *.md files
+au BufRead,BufNewFile *.md set filetype=markdown
+" -- au BufRead,BufNewFile *.md set syntax=markdown
+
