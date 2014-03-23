@@ -13,8 +13,8 @@ map <C-n> : NERDTreeToggle<CR>
 
 " Fix indentation to 4 spaces
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 " Allow nerdTree to modify
 set modifiable
