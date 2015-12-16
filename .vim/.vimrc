@@ -9,7 +9,8 @@ set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 let g:Powerline_symbols = 'fancy'
 " Adding NERDTreeToggle uption to Ctrl-n
-map <C-n> : NERDTreeToggle<CR> 
+"map <C-n> : NERDTreeToggle<CR> 
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 " Fix indentation to 4 spaces
 set smartindent
