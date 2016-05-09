@@ -1,0 +1,6 @@
+source ~/.vimrc
+
+" Map idea mappings
+:map <Leader>f :action GotoFile<CR>
+:map <Leader>d :action GotoDeclaration<CR>
+
