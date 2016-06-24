@@ -40,3 +40,12 @@
 [submodule ".vim/bundle/vim-csharp"]
 	path = .vim/bundle/vim-csharp
 	url = git://github.com/OrangeT/vim-csharp.git
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/bundle/vim-go"]
+	path = .vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/bundle/vim-gocode"]
+	path = .vim/bundle/vim-gocode
+	url = https://github.com/Blackrush/vim-gocode.git

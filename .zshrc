@@ -1,11 +1,13 @@
 # Path to your oh-my-zsh configuration.
-ZSH=/home/arman/.oh-my-zsh
+#ZSH=~/.oh-my-zsh
+export ZSH=/home/vagrant/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="clean"
+#ZSH_THEME="clean"
+ZSH_THEME="robbyrussell"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -48,9 +50,15 @@ ZSH_THEME="clean"
 plugins=(rails ruby git)
 
 source $ZSH/oh-my-zsh.sh
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
+# Configure Go
+gvm use go1.6.2
+export GOROOT_BOOTSTRAP=$GOROOT
 
 # User configuration
-
+#export GOPATH=$HOME/dev/go
+# export GOBIN=$HOME/dev/go/bin
 export PATH="$PATH:/usr/local/heroku/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/novell/iprint/bin:/home/arman/.rvm/bin:/home/arman/.cabal/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -85,3 +93,5 @@ alias gc='git checkout'
 alias gra='git remote add'
 alias gr='git remote'
 alias gcl='git clone'
+
+alias vim='TERM=xterm-256color vim'
