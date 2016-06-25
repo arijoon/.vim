@@ -12,7 +12,7 @@ set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
 set background=dark
-color solarized
+color peachpuff
 
 " Mapping
 no <down> ddp
