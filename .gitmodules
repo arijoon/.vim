@@ -49,3 +49,9 @@
 [submodule ".vim/bundle/vim-gocode"]
 	path = bundle/vim-gocode
 	url = https://github.com/Blackrush/vim-gocode.git
+[submodule "bundle/SimpylFold"]
+	path = bundle/SimpylFold
+	url = https://github.com/tmhedberg/SimpylFold.git
+[submodule "bundle\\YouCompleteMe"]
+	path = bundle\\YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git

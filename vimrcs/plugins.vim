@@ -40,3 +40,17 @@ let g:go_highlight_build_constraints = 1
 
 let g:go_fmt_command = "goimports"
 
+" Python Configuration
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+" SimpylFold
+let g:SimpylFold_docstring_preview = 1 
+autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
