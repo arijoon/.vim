@@ -40,6 +40,20 @@ let g:go_highlight_build_constraints = 1
 
 let g:go_fmt_command = "goimports"
 
+" Python Configuration
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+" SimpylFold
+let g:SimpylFold_docstring_preview = 1 
+autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 " Fix indentation to 2 spaces
 set smartindent
 set tabstop=2
@@ -53,6 +67,12 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
+set splitbelow
+set splitright
+
+set foldmethod=indent
+set foldlevel=99
+
 set background=dark
 color peachpuff
 
@@ -61,6 +81,8 @@ no <down> ddp
 no <up> ddkP
 no <left> gT
 no <right> gt
+
+noremap <space> za
 
 " Window navigation
 nmap <silent> <A-Up> :wincmd k<CR>
@@ -74,9 +96,6 @@ vnoremap <C-X> "+x
 " CTRL-C is Copy
 vnoremap <C-C> "+y
 
-" CTRL-V is Paste
-map <C-V> "+gP
-
 " adding syntax highlighting for all *.md files
 au BufRead,BufNewFile *.md set filetype=markdown
 
@@ -84,6 +103,9 @@ au BufRead,BufNewFile *.md set filetype=markdown
 nnoremap <Leader>i :vsc Resharper.Resharper_GoToImplementation<CR>
 nnoremap <Leader>f :vsc Resharper.Resharper_GoToFile<CR>
 nnoremap <Leader>d :vsc Resharper.Resharper_GoToTypeDeclaration<CR>
+
+" Flag whitespace
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 if has("gui_running")
 	let g:Powerline_symbols = 'fancy'
