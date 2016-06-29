@@ -42,13 +42,13 @@ let g:go_fmt_command = "goimports"
 
 " Python Configuration
 au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+    \ set tabstop=4       |
+    \ set softtabstop=4   |
+    \ set shiftwidth=4    |
+    \ set textwidth=79    |
+    \ set expandtab       |
+    \ set autoindent      |
+    \ set fileformat=unix 
 
 " SimpylFold
 let g:SimpylFold_docstring_preview = 1 
@@ -103,9 +103,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 nnoremap <Leader>i :vsc Resharper.Resharper_GoToImplementation<CR>
 nnoremap <Leader>f :vsc Resharper.Resharper_GoToFile<CR>
 nnoremap <Leader>d :vsc Resharper.Resharper_GoToTypeDeclaration<CR>
-
-" Flag whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 if has("gui_running")
 	let g:Powerline_symbols = 'fancy'
