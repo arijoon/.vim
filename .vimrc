@@ -102,7 +102,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " Mapping VisualStudio commands
 nnoremap <Leader>i :vsc Resharper.Resharper_GoToImplementation<CR>
 nnoremap <Leader>f :vsc Resharper.Resharper_GoToFile<CR>
-nnoremap <Leader>d :vsc Resharper.Resharper_GoToTypeDeclaration<CR>
+nnoremap <Leader>d :vsc Resharper.Resharper_GoToDeclaration<CR>
 
 if has("gui_running")
 	let g:Powerline_symbols = 'fancy'
@@ -116,3 +116,8 @@ if has("gui_running")
 	colorscheme solarized
 	set guifont=Courier_New:h11
 endif
+
+" Source extra options
+let $dir =$HOME."/dotfiles/.vim" "set the .vim folder path
+
+" so $dir/vimrcs/vimrcs.vim
