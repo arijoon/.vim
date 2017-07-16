@@ -1,4 +1,4 @@
-" Pathogen execution on startup
+"" Pathogen execution on startup
 execute pathogen#infect()
 syntax on
 
@@ -105,8 +105,8 @@ nnoremap <Leader>f :vsc Resharper.Resharper_GoToFile<CR>
 nnoremap <Leader>d :vsc Resharper.Resharper_GoToDeclaration<CR>
 
 if has("gui_running")
-	let g:Powerline_symbols = 'fancy'
-	autocmd Vimenter * NERDTreeTabsToggle 
+	"let g:Powerline_symbols = 'fancy'
+	"autocmd Vimenter * NERDTreeTabsToggle 
 
 	" Change initial window size
 	set lines=50 columns=150
@@ -115,9 +115,8 @@ if has("gui_running")
 	set background=dark
 	colorscheme solarized
 	set guifont=Courier_New:h11
+else 
+  let g:airline_powerline_fonts=1
+  let g:Powerline_symbols='unicode'
 endif
 
-" Source extra options
-let $dir =$HOME."/dotfiles/.vim" "set the .vim folder path
-
-" so $dir/vimrcs/vimrcs.vim
