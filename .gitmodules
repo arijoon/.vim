@@ -52,6 +52,6 @@
 [submodule "bundle/SimpylFold"]
 	path = bundle/SimpylFold
 	url = https://github.com/tmhedberg/SimpylFold.git
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vim-log-syntax"]
+	path = bundle/vim-log-syntax
+	url = https://github.com/dzeban/vim-log-syntax.git
