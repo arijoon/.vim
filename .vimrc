@@ -1,5 +1,24 @@
 "" Pathogen execution on startup
 execute pathogen#infect()
+" Pathogen execution on startup
+let g:pathogen_disabled = [ 'YouCompleteMe', 'omnisharp-vim' ]
+
+if !&diff
+  " Diff mode
+  execute pathogen#infect()
+else
+  diffopt+=iwhite
+  set cursorline
+  map ] ]c
+  map [ [c
+  hi DiffAdd    ctermfg=233 ctermbg=LightGreen guifg=#003300 guibg=#DDFFDD gui=none cterm=none
+  hi DiffChange ctermbg=white  guibg=#ececec gui=none   cterm=none
+  hi DiffText   ctermfg=233  ctermbg=yellow  guifg=#000033 guibg=#DDDDFF gui=none cterm=none
+  " :diffg RE  " get from REMOTE
+  " :diffg BA  " get from BASE
+  " :diffg LO  " get from LOCAL
+endif
+
 syntax on
 
 filetype plugin indent on
@@ -9,7 +28,7 @@ filetype plugin on
 set modifiable
 
 map <C-n> : NERDTreeToggle<CR> 
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
+let g:NERDTreeHijackNetrw=0
 
 let mapleader = ","
 
@@ -83,6 +102,7 @@ no <left> gT
 no <right> gt
 
 noremap <space> za
+noremap <C-q> <C-v>
 
 " Window navigation
 nmap <silent> <A-Up> :wincmd k<CR>
@@ -100,14 +120,20 @@ vnoremap <C-C> "+y
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " Mapping VisualStudio commands
-nnoremap <Leader>i :vsc Resharper.Resharper_GoToImplementation<CR>
-nnoremap <Leader>f :vsc Resharper.Resharper_GoToFile<CR>
-nnoremap <Leader>d :vsc Resharper.Resharper_GoToDeclaration<CR>
+"nnoremap <Leader>i :vsc Resharper.Resharper_GoToImplementation<CR>
+"nnoremap <Leader>f :vsc Resharper.Resharper_GoToFile<CR>
+"nnoremap <Leader>u :vsc Resharper.Resharper_FindUsages<CR>
+"nnoremap <Leader>d :vsc Resharper.Resharper_GoToDeclaration<CR>
+"nnoremap <Leader>gb :vsc Resharper.Resharper_NavigateBackward<CR>
+"nnoremap <Leader>rt :vsc Resharper.Resharper_RefactorThis<CR>
+nnoremap <Leader>p "0p
+inoremap jj <ESC>
 
 if has("gui_running")
 	"let g:Powerline_symbols = 'fancy'
 	"autocmd Vimenter * NERDTreeTabsToggle 
 
+  let g:Powerline_symbols = 'fancy'
 	" Change initial window size
 	set lines=50 columns=150
 
@@ -118,5 +144,13 @@ if has("gui_running")
 else 
   let g:airline_powerline_fonts=1
   let g:Powerline_symbols='unicode'
+  set encoding=utf-8
+  let g:airline_powerline_fonts=1
+  "set guifont=Source\ Code\ Pro\ for\ Powerline:h11
+  set guifont=Courier_New:h11
+
+else
+  let g:Powerline_symbols = 'unicode'
+  let g:airline_powerline_fonts=1
 endif
 
