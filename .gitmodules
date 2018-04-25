@@ -55,3 +55,6 @@
 [submodule "bundle/vim-log-syntax"]
 	path = bundle/vim-log-syntax
 	url = https://github.com/dzeban/vim-log-syntax.git
+[submodule "bundle/clam.vim"]
+	path = bundle/clam.vim
+	url = https://github.com/sjl/clam.vim
