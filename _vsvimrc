@@ -81,7 +81,12 @@ nnoremap <Leader>gb :vsc View.NavigateBackward<CR>
 nnoremap <Leader>rt :vsc Resharper.Resharper_RefactorThis<CR>
 nnoremap <Leader>ci :vsc Edit.CommentSelection<CR>
 nnoremap <Leader>cu :vsc Edit.UncommentSelection<CR>
-nnoremap <Leader>p "0p
+nnoremap <Leader>sa :vsc SolutionExplorer.SyncWithActiveDocument<CR>
+nnoremap <Leader>rr :vsc Refactor.Rename<CR>
+nnoremap <Leader>rt :vsc Resharper.Resharper_RefactorThis<CR>
+nnoremap <Leader>gi :vsc Resharper.Resharper_ToToImplementations<CR>
+nnoremap <Leader>pp "0p
+nnoremap <Leader>cc "0y
 inoremap jj <ESC>
 
 if has("gui_running")
