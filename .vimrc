@@ -148,9 +148,5 @@ else
   let g:airline_powerline_fonts=1
   "set guifont=Source\ Code\ Pro\ for\ Powerline:h11
   set guifont=Courier_New:h11
-
-else
-  let g:Powerline_symbols = 'unicode'
-  let g:airline_powerline_fonts=1
 endif
 
