@@ -58,3 +58,6 @@
 [submodule "bundle/clam.vim"]
 	path = bundle/clam.vim
 	url = https://github.com/sjl/clam.vim
+[submodule "bundle/Dockerfile"]
+	path = bundle/Dockerfile
+	url = https://github.com/ekalinin/Dockerfile.vim.git
