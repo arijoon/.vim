@@ -3,7 +3,7 @@ let g:pathogen_disabled = [ 'YouCompleteMe', 'omnisharp-vim' ]
 
 if !&diff
   " Diff mode
-  execute pathogen#infect()
+  " execute pathogen#infect()
 else
   diffopt+=iwhite
   set cursorline
